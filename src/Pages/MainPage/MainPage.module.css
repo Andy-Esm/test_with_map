@@ -1,0 +1,12 @@
+.mapBox {
+	position: relative;
+	background: url('../../assets/cart2-CGtZG1e2.jpg') center/cover no-repeat;
+	height: 100vh;
+	width: 100vw;
+}
+.mapBox::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}

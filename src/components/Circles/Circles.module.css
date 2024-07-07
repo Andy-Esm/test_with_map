@@ -1,0 +1,57 @@
+.circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: red;
+	z-index: 1;
+	animation: fadeOut 2s linear 6s;
+}
+
+.circle::before,
+.circle::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: transparent;
+	z-index: -1;
+	border: 1px dashed #fff;
+	opacity: 0;
+}
+
+.circle::before {
+	animation: wave 7s linear 1s;
+}
+
+.circle::after {
+	animation: wave 9s linear 3s;
+}
+
+@keyframes wave {
+	0% {
+		width: 25px;
+		height: 25px;
+		opacity: 1;
+	}
+	100% {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
