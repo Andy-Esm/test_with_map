@@ -2,7 +2,7 @@ import './App.css';
 import {MainPage} from './Pages';
 function App() {
 	return (
-		<div className="wrapper">
+		<div className="container">
 			<MainPage />
 		</div>
 	);
